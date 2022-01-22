@@ -17,7 +17,7 @@ header("Location: main.php");
 <body>
 <div class="sectionsWrap">
     <section class="navi">
-            <a href="https://thepadproject.is-great.net"><img src="images/logo.png" alt="logo"></a>
+            <a href=index.php><img src="images/logo.png" alt="logo"></a>
             <h1 class="napis">WEBINARY</h1>
             <button class="button"><a href=oferty.php><p>Przeglądaj jako gość</p></a></button>
             <button class="button"><a href=rejestracja.php><p>Rejestracja</p></a></button>

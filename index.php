@@ -15,18 +15,22 @@ header("Location: main.php");
     <meta charset="UTF-8">
     <title>Autoryzacja użytkowników</title>
     <link rel="stylesheet" href="styles/styles.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="sectionsWrap">
         <section class="navi">
-            <a href="https://thepadproject.is-great.net"><img src="images/logo.png" alt="logo"></a>
-            <h1 class="napis">WEBINARY</h1>
-            <button class="button"><a href=oferty.php><p>Przeglądaj jako gość</p></a></button>
-            <button class="button"><a href=rejestracja.php><p>Rejestracja</p></a></button>
-        
+            <a href=index.php><img src="images/logo.png" alt="logo"></a>
+            <h1 class="napis">FILMY</h1>
+            <button class="button" style="display:none"><a href=oferty.php>
+                    <p>Przeglądaj jako gość</p>
+                </a></button>
+            <button class="button"><a href=rejestracja-no-captcha.php>
+                    <p>Rejestracja</p>
+                </a></button>
+
         </section>
 
         <section class="main">
@@ -40,17 +44,17 @@ header("Location: main.php");
             ?>
             <form action="zaloguj.php" method="post" class="recaptchaForm">
                 <h1>Logowanie</h1>
-                <input type="text" name="login" class="textInput" id="login" placeholder="Login" required/>
-                <input type="password" name="haslo" class="textInput" id="haslo" placeholder = "Hasło" required />
+                <input type="text" name="login" class="textInput" id="login" placeholder="Login" required />
+                <input type="password" name="haslo" class="textInput" id="haslo" placeholder="Hasło" required />
                 <input type="submit" value="Zaloguj się" class="button submitButton" />
             </form>
         </section>
         <section class="footer">
             <hr>
-            <p>Projekt <br><br>
+            <p>Projekt Usługi Sieciowe<br><br>
                 Dominik Jagódzki<br>
-                Patryk Lenart<br>
-                Andrzej Małowiecki
+                Julia Smolak<br>
+                Jakub Czastor
             </p>
         </section>
     </div>
