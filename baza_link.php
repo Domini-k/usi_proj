@@ -1,8 +1,8 @@
 <?php
-$serwer="sql300.byetcluster.com";
-$nazwa_bazy="b3_27797238_padprojbdami";
-$user="b3_27797238";
-$pass="AoRosS666";
+$serwer="sql309.epizy.com";
+$nazwa_bazy="epiz_30875693_us_proj";
+$user="epiz_30875693";
+$pass="48cO4vlZkgCb4v";
 
 $conn = new PDO("mysql:host=$serwer;dbname=$nazwa_bazy", "$user", "$pass");
 
