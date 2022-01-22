@@ -1,0 +1,290 @@
+/*
+==================================================
+Table of Content
+1. Variables
+2. Body and global styles
+3. Main wrapper style
+4. Navi section style
+5. Main section style
+6. Footer Section style
+7. Rejestracja.php styles
+8. Ekran przeglądania ofert webinarów styles
+9. Panel edycji po zalogowaniu
+10.Panel dodawania webinarów
+===================================================
+*/
+
+//1. Variables
+$mainColor:#1b1c21;
+$secColor:#25262b;
+$textColor:#969aa3;
+$detailsColor:#1c70ff;
+$detailsLighterColor:#4d8eff;
+$green:#17cc86;
+$yellow:#ffcd00;
+$purple:#c44eff;
+
+//2. Body and global styles
+//======================================================
+.cbalink {
+    display: none !important;
+}
+
+body {
+    text-decoration: none;
+    height: 100vh;
+    background-color: $mainColor;
+    color: $textColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+button,
+.button,
+.buttonReje {
+    background-color: $detailsColor;
+    color: white;
+    border: transparent;
+    padding: 0.2vw 2vw 0.2vw 2vw;
+    border-radius: 15px;
+    font-size: 17px;
+    transition: all .45s;
+    box-shadow: 0px 0px 8px 0px rgba(77, 142, 255, 0.35);
+}
+
+button:hover,
+.button:hover,
+.buttonReje:hover {
+    background-color: $detailsLighterColor;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: 0.1vw solid $secColor;
+    width: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+}
+
+//3. Main wrapper style; main wrapper = sectionsWrap
+//======================================================
+.sectionsWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+
+    .buttonBack {
+        align-self: center;
+    }
+}
+
+//4. Navi section style; section = navi
+//======================================================
+.navi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    border-bottom: 0.1vw solid $secColor;
+
+
+
+    img {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    h1 {
+        color: white;
+    }
+}
+
+//5. Main section style; section = main
+//======================================================
+.main {
+    flex: 2;
+    color: white;
+    //padding: 4vw 35vw;
+    align-self: center;
+
+    .recaptchaForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $secColor;
+        border: 10px solid $secColor;
+        border-radius: 10%;
+        padding: 0 3vw 3vw 3vw;
+        gap: 20px;
+
+        .textInput {
+            border: 0;
+            border-bottom: 1.5px solid $mainColor;
+            padding: 10px 10px;
+            font-size: 1.1vw;
+            transition: all .35s;
+            background-color: $secColor;
+            color: white;
+
+        }
+
+        .textInput:focus {
+            outline: 0;
+            border-bottom: 2px solid $detailsColor;
+        }
+
+        .submitButton {
+            padding: 1.5vw 5.5vw 1.5vw 5.5vw;
+            margin-top: 8%;
+            pointer-events: painted;
+        }
+    }
+}
+
+//6. Footer Section style; section - footer - text about the project
+//======================================================
+.footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+//7. Rejestracja.php styles
+//======================================================
+.formReje {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $secColor;
+    border: 10px solid $secColor;
+    border-radius: 10%;
+    padding: 0 3vw 3vw 3vw;
+    gap: 10px;
+
+    .textInput {
+        border: 0;
+        border-bottom: 1.5px solid $mainColor;
+        padding: 10px 10px;
+        font-size: 1.1vw;
+        transition: all .35s;
+        background-color: $secColor;
+        color: white;
+
+    }
+
+    .textInput:focus {
+        outline: 0;
+        border-bottom: 2px solid $detailsColor;
+    }
+
+    .submitButton {
+        padding: 1.5vw 5.5vw 1.5vw 5.5vw;
+        margin-top: 8%;
+        pointer-events: painted;
+    }
+
+    .buttonReje {
+        padding: 1.2vw;
+        width: 100%;
+    }
+}
+
+//8.Ekran przeglądania ofert webinarów styles
+.mainGuestBrowseContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+//9.Panel edycji po zalogowaniu
+.mainWrapperMainMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .buttonMenu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+//10.Panel dodawania webinarów
+
+.addForm {
+    align-self: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: $secColor;
+    border: 10px solid $secColor;
+    border-radius: 10%;
+    padding: 2vw 6vw;
+    gap: 10px;
+
+    .textInput {
+        border: 0;
+        border-bottom: 1.5px solid $mainColor;
+        padding: 10px 10px;
+        font-size: 1.1vw;
+        transition: all .35s;
+        background-color: $secColor;
+        color: white;
+    }
+
+    .textInput:focus {
+        outline: 0;
+        border-bottom: 2px solid $detailsColor;
+    }
+
+    .buttonMenu {
+        display: flex;
+        gap: 10px;
+        margin-top: 2vw;
+        align-self: center;
+        justify-content: space-around;
+
+        >* {
+            padding: 1.5vw 5.5vw 1.5vw 5.5vw;
+        }
+    }
+}
+
+.dodawanieWrap {
+    h1 {
+        align-self: center;
+    }
+
+    gap:10px;
+
+    a {
+        align-self: center;
+
+        button {
+            padding: 0.5vw 5.5vw 0.5vw 5.5vw;
+        }
+    }
+}
+
+.usunPhpWrap {
+    display: flex;
+    gap: 0px;
+
+    .usunPhpForm {
+        gap: 50px;
+    }
+}
