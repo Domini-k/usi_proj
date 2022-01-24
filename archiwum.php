@@ -2,27 +2,29 @@
   session_start();
 ?>
 <html lang="pl-PL">
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<div class="mainGuestBrowseContent" style="    display: flex;
+    <div class="mainGuestBrowseContent" style="    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;">
-  <?php 
+        <?php 
   if(isset($_SESSION['username'])){
     echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">"."Witaj ". $_SESSION['username'] . "!"."</h1>";
   } else {
     echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">Obecnie przeglądasz archiwum webinarów jako gość."."<br>"."Zaloguj się a otrzymasz możliwość dodawania własnych webinarów do naszej strony!</h1>";}
   ?>
-    <?php
+        <?php
     
     try {
         require_once "baza_link.php";
@@ -74,8 +76,11 @@
       echo "Błąd połączenia z bazą: " . $err->getMessage();
     }
     ?>
-    <a href=oferty.php><button class="buttonBack buttonBackBrowse"><p>Powrót</p></button></a>
-</div>
-</div>
+        <a href=oferty.php><button class="buttonBack buttonBackBrowse">
+                <p>Powrót</p>
+            </button></a>
+    </div>
+    </div>
 </body>
+
 </html>
