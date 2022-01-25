@@ -8,4 +8,4 @@
 #model = keras.models.load_model('my_model')
 #prediction = model.predict([input])
 
-print('POG')
+print('coś')
