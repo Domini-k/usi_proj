@@ -13,14 +13,25 @@
 
     <h1>Testing integration between Php and python</h1></br>
 
+    <form action="" method="post">
+
+        <input type="text" name="providedText" placeholder="Provide the text" />
+
+        <input type="submit" name="submit" />
+    </form>
+
     <?php
-    $input = "This is text from php";
-    $encoded64Input = base64_encode($input);
-    $command = escapeshellcmd("python3 D:\Programy\PHP - XAMPP\htdocs\usi_proj\predictions.py");
-    $output = exec($command);
-    echo "before" . "</br>";
-    echo shell_exec("python3 predictions.py");
-    echo "after" . "</br>";
+
+    if (isset($_POST['submit'])) {
+        $input = $_POST['providedText'];
+        file_put_contents('saved_input.json', json_encode($input));
+        shell_exec('python predictions.py');
+        $p = json_decode(file_get_contents('saved_prediction.json'));
+        echo $p;
+    } else {
+        echo "provide the text";
+    }
+    echo "</br>" . "=============================================================" . "</br>" . "end of prediction process";
     ?>
 
 </body>
