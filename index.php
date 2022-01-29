@@ -23,12 +23,12 @@ header("Location: main.php");
     <div class="sectionsWrap">
         <section class="navi">
             <a href=index.php><img src="images/logo.png" alt="logo"></a>
-            <h1 class="napis">FILMY</h1>
+            <h1 class="napis">Review a movie!</h1>
             <button class="button" style="display:none"><a href=oferty.php>
-                    <p>Przeglądaj jako gość</p>
+                    <p>View as a guest</p>
                 </a></button>
             <button class="button"><a href=rejestracja-no-captcha.php>
-                    <p>Rejestracja</p>
+                    <p>Sign up</p>
                 </a></button>
 
         </section>
@@ -43,10 +43,10 @@ header("Location: main.php");
             
             ?>
             <form action="zaloguj.php" method="post" class="recaptchaForm">
-                <h1>Logowanie</h1>
+                <h1>Your credentials</h1>
                 <input type="text" name="login" class="textInput" id="login" placeholder="Login" required />
-                <input type="password" name="haslo" class="textInput" id="haslo" placeholder="Hasło" required />
-                <input type="submit" value="Zaloguj się" class="button submitButton" />
+                <input type="password" name="haslo" class="textInput" id="haslo" placeholder="Password" required />
+                <input type="submit" value="Log in" class="button submitButton" />
             </form>
         </section>
         <section class="footer">
