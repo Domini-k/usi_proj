@@ -2,7 +2,7 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import tensorflow_hub as hub
 
-# This file initializes model and saves it to file after 5 epochs of training
+# This file initializes model and saves it to file after 1 epoch of training
 
 train_data, validation_data, test_data = tfds.load(
     'imdb_reviews', split=['train[60%:]', 'train[:40%]', 'test'], as_supervised=True)

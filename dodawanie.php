@@ -61,7 +61,7 @@ if (!isset($_SESSION['username'])) {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 $sql = "INSERT INTO `recenzje`(`Tytul`, `Tresc`, `Ocena`, `Data_dod`)
-            VALUES ('$title','$review','$rating','$data')";
+            VALUES ('$title',('$review'),'$rating','$data')";
 
                 $conn->exec($sql);
                 echo 'Your review is added! Degree of positivity: ';
