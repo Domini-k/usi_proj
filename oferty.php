@@ -38,7 +38,11 @@
         <th>Title</th>
         <th>Review</th>
         <th>Rating</th>
+<<<<<<< HEAD
 		    <th>Date</th>
+=======
+		<th>Data_dod</th>
+>>>>>>> e343580a38bfc9758e62b4fb87b708989249cd77
 		</tr>";
         
         foreach ($data as $row) 
@@ -49,7 +53,11 @@
             $pole4=$row['Data_dod'];
             $p_lp++;
             
+<<<<<<< HEAD
             echo "<tr><td>" . $pole1. "</td><td>" . $pole2. "</td><td class='tabBold'>" . $pole3. "</td>
+=======
+            echo "<tr><td>" . $pole1. "</td><td>" . $pole2. "</td><td>" . $pole3. "</td>
+>>>>>>> e343580a38bfc9758e62b4fb87b708989249cd77
             <td>" . $pole4. "</td></tr>";
             
             //echo "<br>";
