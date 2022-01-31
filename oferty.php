@@ -18,9 +18,9 @@
     gap: 30px;">
   <?php 
   if(isset($_SESSION['username'])){
-    echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">"."Witaj ". $_SESSION['username'] . "!"."</h1>";
+    echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">"."Hello ". $_SESSION['username'] . "!"."</h1>";
   } else {
-    echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">Obecnie przeglądasz oferty webinarów jako gość."."<br>"."Zaloguj się a otrzymasz możliwość dodawania własnych webinarów do naszej strony!</h1>";}
+    echo "<h1 style=\"padding:20px; border:2px solid #FAFAFA;text-align: center;\">Login to add a review"."<br>"."You can only view the reviews</h1>";}
   ?>
     <?php
     
@@ -29,36 +29,28 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //echo 'Poprawne połączenie z bazą <br>';
         
-        $dzis=date("Y-m-d");
-        $data = $conn->query("SELECT`Nazwa_webinaru`, `Data_webinaru`, `Godzina`, `Liczba_miejsc`, `Opis`, `Tag`, `Platforma`, `Wlasciciel` FROM `User_content` WHERE `Data_webinaru`>='$dzis' ORDER BY Data_webinaru")->fetchAll();
+        
+        $data = $conn->query(" SELECT`Tytul`, `Tresc`, `Ocena`, `Data_dod` FROM `recenzje` ORDER BY Data_dod")->fetchAll();
         $p_lp=0;
         
-        echo "<table border=3>
+        echo "<table>
         <tr>
-        <th>Nazwa</th>
-        <th>Data</th>
-        <th>Godzina</th>
-        <th>Liczba miejsc</th>
-        <th>Krótki opis wydarzenia</th>
-        <th>Słowa kluczowe</th>
-        <th>Platforma</th>
-        <th>Wlasciciel</th>
-        </tr>";
+        <th>Title</th>
+        <th>Review</th>
+        <th>Rating</th>
+		    <th>Date</th>
+		</tr>";
         
         foreach ($data as $row) 
         {
-            $pole1=$row['Nazwa_webinaru'];
-            $pole2=$row['Data_webinaru'];
-            $pole3=$row['Godzina'];
-            $pole4=$row['Liczba_miejsc'];
-            $pole5=$row['Opis'];
-            $pole6=$row['Tag'];
-            $pole7=$row['Platforma'];
-            $pole8=$row['Wlasciciel'];
+            $pole1=$row['Tytul'];
+            $pole2=$row['Tresc'];
+            $pole3=$row['Ocena'];
+            $pole4=$row['Data_dod'];
             $p_lp++;
             
-            echo "<tr><td>" . $pole1. "</td><td>" . $pole2. "</td><td>" . $pole3. "</td>
-            <td>" . $pole4. "</td><td>" . $pole5. "</td><td>" . $pole6. "</td><td>" . $pole7 ."</td><td>" . $pole8 . "</td></tr>";
+            echo "<tr><td>" . $pole1. "</td><td>" . $pole2. "</td><td class='tabBold'>" . $pole3. "</td>
+            <td>" . $pole4. "</td></tr>";
             
             //echo "<br>";
         }
@@ -71,8 +63,7 @@
       echo "Błąd połączenia z bazą: " . $err->getMessage();
     }
     ?>
-    <a href=main.php><button class="buttonBack buttonBackBrowse"><p>Powrót na stronę główną</p></button></a>
-    <a href=archiwum.php><button class="buttonBack buttonBackBrowse"><p>Przejdź do Archiwum</p></button></a>
+    <a href=main.php><button class="buttonBack buttonBackBrowse"><p>Main page</p></button></a>
 </div>
 </div>
 </body>

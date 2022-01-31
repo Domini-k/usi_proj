@@ -62,6 +62,19 @@ h1 {
   color: white;
 }
 
+table {
+  border: none;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+}
+
+td {
+  text-align: center;
+  width: 20%;
+  height: 4vh;
+}
+
 .sectionsWrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,5 +360,9 @@ h1 {
 
 .usunPhpWrap .usunPhpForm {
   gap: 50px;
+}
+
+.tabBold {
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */
